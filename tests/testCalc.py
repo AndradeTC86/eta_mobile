@@ -38,3 +38,6 @@ class testCalculadora(unittest.TestCase):
         formula, resultado = calculadora.multiplicar(4, 3)
         assert resultado_esperado == resultado
         assert formula_esperada == formula
+
+    def tearDown(self):
+        self.driver.instance.quit()
