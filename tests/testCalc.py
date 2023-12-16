@@ -9,24 +9,32 @@ class testCalculadora(unittest.TestCase):
 
     def testSoma(self):
         calculadora = Calculadora(self.driver)
+        formula_esperada = '5+6'
         resultado_esperado = 11
-        resultado = calculadora.somar(5, 6)
+        formula, resultado = calculadora.somar(5, 6)
         assert resultado_esperado == resultado
+        assert formula_esperada == formula
 
     def testSubtracao(self):
         calculadora = Calculadora(self.driver)
+        formula_esperada = '9−3'
         resultado_esperado = 6
-        resultado = calculadora.subtrair(9, 3)
+        formula, resultado = calculadora.subtrair(9, 3)
         assert resultado_esperado == resultado
+        assert formula_esperada == formula
 
     def testDivisao(self):
         calculadora = Calculadora(self.driver)
+        formula_esperada = '8÷2'
         resultado_esperado = 4
-        resultado = calculadora.dividir(8, 2)
+        formula, resultado = calculadora.dividir(8, 2)
         assert resultado_esperado == resultado
+        assert formula_esperada == formula
 
     def testMultiplicacao(self):
         calculadora = Calculadora(self.driver)
+        formula_esperada = '4×3'
         resultado_esperado = 12
-        resultado = calculadora.multiplicar(4, 3)
+        formula, resultado = calculadora.multiplicar(4, 3)
         assert resultado_esperado == resultado
+        assert formula_esperada == formula

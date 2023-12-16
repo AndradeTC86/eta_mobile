@@ -53,28 +53,32 @@ class Calculadora:
         self.clicarnumero(num1)
         self.add.click()
         self.clicarnumero(num2)
-        self.eq.click()
-        return int(self.result.text)
+        formula = self.formula.text
+        result = int(self.result.text)
+        return formula, result
 
     def subtrair(self, num1, num2):
         self.clicarnumero(num1)
         self.sub.click()
         self.clicarnumero(num2)
-        self.eq.click()
-        return int(self.result.text)
+        formula = self.formula.text
+        result = int(self.result.text)
+        return formula, result
 
     def dividir(self, num1, num2):
         self.clicarnumero(num1)
         self.div.click()
         self.clicarnumero(num2)
-        self.eq.click()
-        return int(self.result.text)
+        formula = self.formula.text
+        result = int(self.result.text)
+        return formula, result
 
     def multiplicar(self, num1, num2):
         self.clicarnumero(num1)
         self.mul.click()
         self.clicarnumero(num2)
-        self.eq.click()
-        return int(self.result.text)
+        formula = self.formula.text
+        result = int(self.result.text)
+        return formula, result
 
 
